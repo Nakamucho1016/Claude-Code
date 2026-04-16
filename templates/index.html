@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}{{ site_title }} — SNSトレンドまとめ{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <h2>今日の話題をサクッとチェック</h2>
+  <p class="hero-sub">SNSで話題のニュースをAIがわかりやすく解説します</p>
+</section>
+
+{% if articles %}
+<section class="articles-featured">
+  <h2 class="section-title">最新のまとめ</h2>
+  <div class="card-grid">
+    {% for article in articles[:5] %}
+    <article class="card card-featured">
+      <div class="card-meta">
+        <time datetime="{{ article.date }}">{{ article.date }}</time>
+        {% for tag in article.tags[:2] %}
+        <span class="badge">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      <h3 class="card-title">
+        <a href="/{{ article.url }}">{{ article.title }}</a>
+      </h3>
+      <p class="card-lede">{{ article.lede | truncate_chars(80) }}</p>
+      <div class="card-footer">
+        <span class="reading-time">約{{ article.reading_time_min }}分で読めます</span>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+{% if articles | length > 5 %}
+<section class="articles-list">
+  <h2 class="section-title">過去のまとめ</h2>
+  <ul class="compact-list">
+    {% for article in articles[5:20] %}
+    <li>
+      <time datetime="{{ article.date }}">{{ article.date }}</time>
+      <a href="/{{ article.url }}">{{ article.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="more-link"><a href="/archive.html">すべてのアーカイブを見る →</a></p>
+</section>
+{% endif %}
+
+{% else %}
+<section class="empty-state">
+  <p>まだ記事がありません。初回の生成をお待ちください。</p>
+</section>
+{% endif %}
+{% endblock %}

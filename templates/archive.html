@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}アーカイブ — {{ site_title }}{% endblock %}
+
+{% block content %}
+<section class="archive-page">
+  <h2 class="section-title">アーカイブ</h2>
+
+  {% if by_date %}
+  {% for date_key, articles in by_date.items() | sort(reverse=True) %}
+  <details class="archive-date" {% if loop.index <= 3 %}open{% endif %}>
+    <summary>
+      <time datetime="{{ date_key }}">{{ date_key }}</time>
+      <span class="count">（{{ articles | length }}件）</span>
+    </summary>
+    <ul class="archive-list">
+      {% for article in articles %}
+      <li>
+        {% for tag in article.tags[:2] %}
+        <span class="badge badge-sm">{{ tag }}</span>
+        {% endfor %}
+        <a href="/{{ article.url }}">{{ article.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </details>
+  {% endfor %}
+  {% else %}
+  <p class="empty-state">まだ記事がありません。</p>
+  {% endif %}
+</section>
+{% endblock %}

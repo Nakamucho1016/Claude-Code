@@ -1,0 +1,59 @@
+name: Daily Matome Generation
+
+on:
+  schedule:
+    # UTC 22:00 = JST 07:00 (毎朝7時に実行)
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "生成する記事数"
+        required: false
+        default: "5"
+      dry_run:
+        description: "ドライラン (true/false)"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run matome pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MATOME_LIMIT: ${{ github.event.inputs.limit || '5' }}
+        run: |
+          args="run --limit $MATOME_LIMIT -v"
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            args="$args --dry-run"
+          fi
+          python -m matome.cli $args
+
+      - name: Commit and push generated site
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          git config user.name "matome-bot"
+          git config user.email "matome-bot@users.noreply.github.com"
+          git add site/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "auto: $(date +%Y-%m-%d) のトレンドまとめを生成"
+            git push
+          fi

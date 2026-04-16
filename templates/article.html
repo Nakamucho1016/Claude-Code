@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }} — {{ site_title }}{% endblock %}
+{% block description %}{{ article.lede }}{% endblock %}
+
+{% block ogp %}
+<meta property="og:title" content="{{ article.title }}">
+<meta property="og:description" content="{{ article.lede }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ site_url }}/{{ record.url }}">
+{% endblock %}
+
+{% block css_path %}../../assets/style.css{% endblock %}
+{% block home_path %}/{% endblock %}
+{% block nav_home %}/{% endblock %}
+{% block nav_archive %}/archive.html{% endblock %}
+{% block nav_feed %}/feed.xml{% endblock %}
+
+{% block content %}
+<article class="article-full">
+  <header class="article-header">
+    <div class="article-meta">
+      <time datetime="{{ date_str }}">{{ date_str }}</time>
+      {% for tag in article.tags %}
+      <span class="badge">{{ tag }}</span>
+      {% endfor %}
+      <span class="reading-time">約{{ article.reading_time_min }}分で読めます</span>
+    </div>
+    <h1 class="article-title">{{ article.title }}</h1>
+  </header>
+
+  <div class="article-lede">
+    <p>{{ article.lede }}</p>
+  </div>
+
+  <div class="article-body">
+    {{ body_html | safe }}
+  </div>
+
+  <details class="sources-section">
+    <summary>出典・参考情報（{{ article.sources | length }}件）</summary>
+    <ol class="sources-list">
+      {% for src in article.sources %}
+      <li>
+        <span class="source-name">{{ src.name }}</span> —
+        <a href="{{ src.url }}" target="_blank" rel="noopener noreferrer">{{ src.title }}</a>
+      </li>
+      {% endfor %}
+    </ol>
+  </details>
+
+  {% if related %}
+  <section class="related-articles">
+    <h2>同日のトピック</h2>
+    <ul>
+      {% for r in related %}
+      <li><a href="{{ r.url }}">{{ r.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <div class="share-buttons">
+    <span>シェア:</span>
+    <a href="https://twitter.com/intent/tweet?text={{ article.title | urlencode }}&url={{ site_url }}/{{ record.url | urlencode }}"
+       target="_blank" rel="noopener noreferrer" class="share-btn share-x">X</a>
+    <a href="https://social-plugins.line.me/lineit/share?url={{ site_url }}/{{ record.url | urlencode }}"
+       target="_blank" rel="noopener noreferrer" class="share-btn share-line">LINE</a>
+  </div>
+
+  <div class="ai-notice">
+    <p>本記事はAIが複数の公開情報源を要約して自動作成したコンテンツです。内容の正確性は保証されません。詳細は上記の出典元をご確認ください。</p>
+  </div>
+</article>
+{% endblock %}
