@@ -12,16 +12,16 @@
   <meta property="og:url" content="{{ site_url }}">
   {% endblock %}
   <link rel="alternate" type="application/rss+xml" title="{{ site_title }}" href="{{ site_url }}/feed.xml">
-  <link rel="stylesheet" href="{% block css_path %}/assets/style.css{% endblock %}">
+  <link rel="stylesheet" href="{% block css_path %}{{ base_path }}/assets/style.css{% endblock %}">
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <h1 class="site-logo"><a href="{% block home_path %}/{% endblock %}">{{ site_title }}</a></h1>
+      <h1 class="site-logo"><a href="{% block home_path %}{{ base_path }}/{% endblock %}">{{ site_title }}</a></h1>
       <nav class="site-nav">
-        <a href="{% block nav_home %}/{% endblock %}">ホーム</a>
-        <a href="{% block nav_archive %}/archive.html{% endblock %}">アーカイブ</a>
-        <a href="{% block nav_feed %}/feed.xml{% endblock %}">RSS</a>
+        <a href="{% block nav_home %}{{ base_path }}/{% endblock %}">ホーム</a>
+        <a href="{% block nav_archive %}{{ base_path }}/archive.html{% endblock %}">アーカイブ</a>
+        <a href="{% block nav_feed %}{{ base_path }}/feed.xml{% endblock %}">RSS</a>
         <button id="theme-toggle" aria-label="テーマ切替">🌓</button>
       </nav>
     </div>

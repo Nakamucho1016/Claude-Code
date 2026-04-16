@@ -37,6 +37,117 @@
       }
     ],
     "reading_time_min": 3,
+    "generated_at": "2026-04-16T07:52:52.131359",
+    "keyword": "AI規制法案"
+  },
+  {
+    "slug": "円安が再び150円台に-家計への影響と今後の見通しをサクッと解説",
+    "title": "円安が再び150円台に — 家計への影響と今後の見通しをサクッと解説",
+    "lede": "為替市場で円安が加速し、1ドル=150円台に突入したことがSNSで話題です。「また円安？食品もまた値上がりするの？」と不安を感じている方も多いのではないでしょうか。背景と家計への影響を整理しました。",
+    "tags": [
+      "経済",
+      "為替",
+      "家計"
+    ],
+    "date": "2026-04-16",
+    "url": "articles/2026-04-16/円安が再び150円台に-家計への影響と今後の見通しをサクッと解説.html",
+    "sources": [
+      {
+        "name": "NHK",
+        "title": "円相場 1ドル=150円台後半に 約3か月ぶりの円安水準",
+        "url": "https://www3.nhk.or.jp/news/example5",
+        "published": ""
+      },
+      {
+        "name": "日本経済新聞",
+        "title": "円安150円台 FRBの利下げ慎重姿勢が背景",
+        "url": "https://www.nikkei.com/example6",
+        "published": ""
+      },
+      {
+        "name": "Bloomberg",
+        "title": "ドル円150円台、日銀の次の一手に注目集まる",
+        "url": "https://www.bloomberg.co.jp/example7",
+        "published": ""
+      }
+    ],
+    "reading_time_min": 3,
+    "generated_at": "2026-04-16T07:52:52.131378",
+    "keyword": "円安150円台"
+  },
+  {
+    "slug": "新型iphone-17の全貌が判明リーク情報5つのポイントまとめ",
+    "title": "新型iPhone 17の全貌が判明？リーク情報5つのポイントまとめ",
+    "lede": "Appleの次期スマートフォン「iPhone 17」に関するリーク情報が相次いでおり、SNSでトレンド入りしています。デザイン刷新やAI機能の強化など、気になる情報をまとめました。",
+    "tags": [
+      "テクノロジー",
+      "Apple",
+      "スマートフォン"
+    ],
+    "date": "2026-04-16",
+    "url": "articles/2026-04-16/新型iphone-17の全貌が判明リーク情報5つのポイントまとめ.html",
+    "sources": [
+      {
+        "name": "MacRumors",
+        "title": "iPhone 17 Design Leak: Horizontal Camera Bar Confirmed",
+        "url": "https://www.macrumors.com/example8",
+        "published": ""
+      },
+      {
+        "name": "ITmedia",
+        "title": "iPhone 17の噂まとめ：デザイン刷新とAI強化が柱",
+        "url": "https://www.itmedia.co.jp/example9",
+        "published": ""
+      },
+      {
+        "name": "日経クロステック",
+        "title": "Apple次期iPhone AI専用チップを大幅強化か",
+        "url": "https://xtech.nikkei.com/example10",
+        "published": ""
+      }
+    ],
+    "reading_time_min": 3,
+    "generated_at": "2026-04-16T07:52:52.131392",
+    "keyword": "新型iPhone"
+  },
+  {
+    "slug": "ai規制法が国会通過へ-私たちの生活はどう変わる3つのポイント",
+    "title": "AI規制法が国会通過へ — 私たちの生活はどう変わる？3つのポイント",
+    "lede": "AIの利用に関する新たな法規制がいよいよ国会で審議入りし、SNSでも大きな話題になっています。「結局、何が規制されるの？」と気になっている方も多いはず。この記事では、法案の概要・影響・今後の見通しを3分でまとめました。",
+    "tags": [
+      "AI",
+      "法律",
+      "テクノロジー"
+    ],
+    "date": "2026-04-16",
+    "url": "articles/2026-04-16/ai規制法が国会通過へ-私たちの生活はどう変わる3つのポイント.html",
+    "sources": [
+      {
+        "name": "NHK",
+        "title": "AI規制法案 国会に提出 生成AIの利用に新たなルール",
+        "url": "https://www3.nhk.or.jp/news/example1",
+        "published": ""
+      },
+      {
+        "name": "日本経済新聞",
+        "title": "AI規制法案の全容判明 企業にラベル表示義務",
+        "url": "https://www.nikkei.com/example2",
+        "published": ""
+      },
+      {
+        "name": "朝日新聞",
+        "title": "AI規制、日本も本格化 欧州に続き包括法案",
+        "url": "https://www.asahi.com/example3",
+        "published": ""
+      },
+      {
+        "name": "Yahoo!ニュース",
+        "title": "AI規制法案 知っておくべきポイントまとめ",
+        "url": "https://news.yahoo.co.jp/example4",
+        "published": ""
+      }
+    ],
+    "reading_time_min": 3,
     "generated_at": "2026-04-16T05:46:53.264242",
     "keyword": "AI規制法案"
   },

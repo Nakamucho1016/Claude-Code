@@ -19,7 +19,7 @@
         {% for tag in article.tags[:2] %}
         <span class="badge badge-sm">{{ tag }}</span>
         {% endfor %}
-        <a href="/{{ article.url }}">{{ article.title }}</a>
+        <a href="{{ base_path }}/{{ article.url }}">{{ article.title }}</a>
       </li>
       {% endfor %}
     </ul>

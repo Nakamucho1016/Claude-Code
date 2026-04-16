@@ -21,7 +21,7 @@
         {% endfor %}
       </div>
       <h3 class="card-title">
-        <a href="/{{ article.url }}">{{ article.title }}</a>
+        <a href="{{ base_path }}/{{ article.url }}">{{ article.title }}</a>
       </h3>
       <p class="card-lede">{{ article.lede | truncate_chars(80) }}</p>
       <div class="card-footer">
@@ -39,11 +39,11 @@
     {% for article in articles[5:20] %}
     <li>
       <time datetime="{{ article.date }}">{{ article.date }}</time>
-      <a href="/{{ article.url }}">{{ article.title }}</a>
+      <a href="{{ base_path }}/{{ article.url }}">{{ article.title }}</a>
     </li>
     {% endfor %}
   </ul>
-  <p class="more-link"><a href="/archive.html">すべてのアーカイブを見る →</a></p>
+  <p class="more-link"><a href="{{ base_path }}/archive.html">すべてのアーカイブを見る →</a></p>
 </section>
 {% endif %}
 

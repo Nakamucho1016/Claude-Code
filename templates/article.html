@@ -10,11 +10,11 @@
 <meta property="og:url" content="{{ site_url }}/{{ record.url }}">
 {% endblock %}
 
-{% block css_path %}../../assets/style.css{% endblock %}
-{% block home_path %}/{% endblock %}
-{% block nav_home %}/{% endblock %}
-{% block nav_archive %}/archive.html{% endblock %}
-{% block nav_feed %}/feed.xml{% endblock %}
+{% block css_path %}{{ base_path }}/assets/style.css{% endblock %}
+{% block home_path %}{{ base_path }}/{% endblock %}
+{% block nav_home %}{{ base_path }}/{% endblock %}
+{% block nav_archive %}{{ base_path }}/archive.html{% endblock %}
+{% block nav_feed %}{{ base_path }}/feed.xml{% endblock %}
 
 {% block content %}
 <article class="article-full">

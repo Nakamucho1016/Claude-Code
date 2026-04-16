@@ -31,8 +31,12 @@ class Settings(BaseSettings):
 
     # サイト設定
     matome_site_url: str = Field(
-        default="https://example.github.io/matome",
+        default="https://nakamucho1016.github.io/Claude-Code",
         description="サイトの公開 URL（OGP 用）",
+    )
+    matome_base_path: str = Field(
+        default="/Claude-Code",
+        description="サイトのベースパス（GitHub Pages プロジェクトサイト用）",
     )
     matome_site_title: str = Field(
         default="今日のトレンドまとめ",
