@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>今日のトレンドまとめ — SNSトレンドまとめ</title>
+  <meta name="description" content="SNSで話題のトレンドをAIがわかりやすく解説する自動まとめサイト">
+  
+  <meta property="og:title" content="今日のトレンドまとめ">
+  <meta property="og:description" content="SNSで話題のトレンドをAIがわかりやすく解説">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.github.io/matome">
+  
+  <link rel="alternate" type="application/rss+xml" title="今日のトレンドまとめ" href="https://example.github.io/matome/feed.xml">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-logo"><a href="/">今日のトレンドまとめ</a></h1>
+      <nav class="site-nav">
+        <a href="/">ホーム</a>
+        <a href="/archive.html">アーカイブ</a>
+        <a href="/feed.xml">RSS</a>
+        <button id="theme-toggle" aria-label="テーマ切替">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<section class="hero">
+  <h2>今日の話題をサクッとチェック</h2>
+  <p class="hero-sub">SNSで話題のニュースをAIがわかりやすく解説します</p>
+</section>
+
+
+<section class="articles-featured">
+  <h2 class="section-title">最新のまとめ</h2>
+  <div class="card-grid">
+    
+    <article class="card card-featured">
+      <div class="card-meta">
+        <time datetime="2026-04-16">2026-04-16</time>
+        
+        <span class="badge">AI</span>
+        
+        <span class="badge">法律</span>
+        
+      </div>
+      <h3 class="card-title">
+        <a href="/articles/2026-04-16/ai規制法が国会通過へ-私たちの生活はどう変わる3つのポイント.html">AI規制法が国会通過へ — 私たちの生活はどう変わる？3つのポイント</a>
+      </h3>
+      <p class="card-lede">AIの利用に関する新たな法規制がいよいよ国会で審議入りし、SNSでも大きな話題になっています。「結局、何が規制されるの？」と気になっている方も多いはず。この記事…</p>
+      <div class="card-footer">
+        <span class="reading-time">約3分で読めます</span>
+      </div>
+    </article>
+    
+    <article class="card card-featured">
+      <div class="card-meta">
+        <time datetime="2026-04-16">2026-04-16</time>
+        
+        <span class="badge">経済</span>
+        
+        <span class="badge">為替</span>
+        
+      </div>
+      <h3 class="card-title">
+        <a href="/articles/2026-04-16/円安が再び150円台に-家計への影響と今後の見通しをサクッと解説.html">円安が再び150円台に — 家計への影響と今後の見通しをサクッと解説</a>
+      </h3>
+      <p class="card-lede">為替市場で円安が加速し、1ドル=150円台に突入したことがSNSで話題です。「また円安？食品もまた値上がりするの？」と不安を感じている方も多いのではないでしょう…</p>
+      <div class="card-footer">
+        <span class="reading-time">約3分で読めます</span>
+      </div>
+    </article>
+    
+    <article class="card card-featured">
+      <div class="card-meta">
+        <time datetime="2026-04-16">2026-04-16</time>
+        
+        <span class="badge">テクノロジー</span>
+        
+        <span class="badge">Apple</span>
+        
+      </div>
+      <h3 class="card-title">
+        <a href="/articles/2026-04-16/新型iphone-17の全貌が判明リーク情報5つのポイントまとめ.html">新型iPhone 17の全貌が判明？リーク情報5つのポイントまとめ</a>
+      </h3>
+      <p class="card-lede">Appleの次期スマートフォン「iPhone 17」に関するリーク情報が相次いでおり、SNSでトレンド入りしています。デザイン刷新やAI機能の強化など、気になる…</p>
+      <div class="card-footer">
+        <span class="reading-time">約3分で読めます</span>
+      </div>
+    </article>
+    
+  </div>
+</section>
+
+
+
+
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="ai-disclosure">
+        本サイトの記事はAIが複数の公開情報源を要約して自動作成したコンテンツです。<br>
+        内容の正確性は保証されません。詳細は各出典元をご確認ください。
+      </p>
+      <p class="copyright">&copy; 今日のトレンドまとめ — Powered by Claude AI</p>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      var html = document.documentElement;
+      var stored = localStorage.getItem('theme');
+      if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        html.setAttribute('data-theme', 'dark');
+      }
+      if (toggle) {
+        toggle.addEventListener('click', function() {
+          var current = html.getAttribute('data-theme');
+          var next = current === 'dark' ? 'light' : 'dark';
+          html.setAttribute('data-theme', next);
+          localStorage.setItem('theme', next);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アーカイブ — 今日のトレンドまとめ</title>
+  <meta name="description" content="SNSで話題のトレンドをAIがわかりやすく解説する自動まとめサイト">
+  
+  <meta property="og:title" content="今日のトレンドまとめ">
+  <meta property="og:description" content="SNSで話題のトレンドをAIがわかりやすく解説">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  
+  <link rel="alternate" type="application/rss+xml" title="今日のトレンドまとめ" href="/feed.xml">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-logo"><a href="/">今日のトレンドまとめ</a></h1>
+      <nav class="site-nav">
+        <a href="/">ホーム</a>
+        <a href="/archive.html">アーカイブ</a>
+        <a href="/feed.xml">RSS</a>
+        <button id="theme-toggle" aria-label="テーマ切替">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<section class="archive-page">
+  <h2 class="section-title">アーカイブ</h2>
+
+  
+  
+  <details class="archive-date" open>
+    <summary>
+      <time datetime="2026-04-16">2026-04-16</time>
+      <span class="count">（3件）</span>
+    </summary>
+    <ul class="archive-list">
+      
+      <li>
+        
+        <span class="badge badge-sm">AI</span>
+        
+        <span class="badge badge-sm">法律</span>
+        
+        <a href="/articles/2026-04-16/ai規制法が国会通過へ-私たちの生活はどう変わる3つのポイント.html">AI規制法が国会通過へ — 私たちの生活はどう変わる？3つのポイント</a>
+      </li>
+      
+      <li>
+        
+        <span class="badge badge-sm">経済</span>
+        
+        <span class="badge badge-sm">為替</span>
+        
+        <a href="/articles/2026-04-16/円安が再び150円台に-家計への影響と今後の見通しをサクッと解説.html">円安が再び150円台に — 家計への影響と今後の見通しをサクッと解説</a>
+      </li>
+      
+      <li>
+        
+        <span class="badge badge-sm">テクノロジー</span>
+        
+        <span class="badge badge-sm">Apple</span>
+        
+        <a href="/articles/2026-04-16/新型iphone-17の全貌が判明リーク情報5つのポイントまとめ.html">新型iPhone 17の全貌が判明？リーク情報5つのポイントまとめ</a>
+      </li>
+      
+    </ul>
+  </details>
+  
+  
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="ai-disclosure">
+        本サイトの記事はAIが複数の公開情報源を要約して自動作成したコンテンツです。<br>
+        内容の正確性は保証されません。詳細は各出典元をご確認ください。
+      </p>
+      <p class="copyright">&copy; 今日のトレンドまとめ — Powered by Claude AI</p>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      var html = document.documentElement;
+      var stored = localStorage.getItem('theme');
+      if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        html.setAttribute('data-theme', 'dark');
+      }
+      if (toggle) {
+        toggle.addEventListener('click', function() {
+          var current = html.getAttribute('data-theme');
+          var next = current === 'dark' ? 'light' : 'dark';
+          html.setAttribute('data-theme', next);
+          localStorage.setItem('theme', next);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
