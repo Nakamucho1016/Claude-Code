@@ -219,6 +219,7 @@ def publish(
             related=related,
             site_title=settings.matome_site_title,
             site_url=settings.matome_site_url,
+            base_path=settings.matome_base_path,
         )
         out_path = articles_dir / f"{record.slug}.html"
         out_path.write_text(html, encoding="utf-8")
@@ -234,6 +235,7 @@ def publish(
         articles=all_records[:20],
         site_title=settings.matome_site_title,
         site_url=settings.matome_site_url,
+        base_path=settings.matome_base_path,
         today=date_str,
     )
     (SITE_DIR / "index.html").write_text(index_html, encoding="utf-8")
@@ -249,6 +251,7 @@ def publish(
     archive_html = archive_tmpl.render(
         by_date=by_date,
         site_title=settings.matome_site_title,
+        base_path=settings.matome_base_path,
     )
     (SITE_DIR / "archive.html").write_text(archive_html, encoding="utf-8")
 
